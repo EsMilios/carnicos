@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" href="css2/style.css"> <!-- Cambia esta ruta según sea necesario -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link rel="shortcut icon" href="Carnes/images/icomeat.ico" type="image/x-icon"> <!-- Ajusta la ruta según la ubicación de tu icono -->
+    <style>
+        /* CSS para el formulario de registro */
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+            margin: 0; /* Asegúrate de que no haya margen en el body */
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Asegúrate de que nada sobresalga del contenedor */
+        }
+
+        .img {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img img {
+            width: 80%; /* Ajustar el tamaño de la imagen aquí */
+        }
+
+        .login-content {
+            flex: 1;
+            padding: 40px;
+            display: flex; /* Añadido para centrar el contenido verticalmente */
+            flex-direction: column; /* Cambiado a columna para alinear los elementos */
+            justify-content: center; /* Centra verticalmente el contenido */
+            align-items: center; /* Centra horizontalmente el contenido */
+        }
+
+        .logo {
+            width: 50px; /* Ajustar el tamaño del logo aquí */
+            height: auto; /* Mantener la proporción */
+            margin-bottom: 20px; /* Añadido margen inferior */
+        }
+
+        .title {
+            font-size: 30px;
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
+        }
+
+        .input-div {
+            margin-bottom: 20px; /* Ajustado para un mejor espaciado */
+            width: 100%; /* Asegura que los cuadros de texto ocupen el ancho completo */
+            position: relative;
+        }
+
+        .input-div .i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        .input-div .div {
+            margin-left: 40px;
+        }
+
+        .input {
+            width: calc(100% - 50px); /* Ajustar el ancho de la entrada */
+            padding: 15px 10px;
+            padding-left: 40px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+            transition: border 0.3s;
+            box-sizing: border-box; /* Incluye el padding en el tamaño total */
+        }
+
+        .input:focus {
+            border: 2px solid #007BFF;
+            outline: none;
+        }
+
+        .btn {
+            width: 100%;
+            background: #007BFF;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="Carnes/images/meat1.png" alt="Imagen de bienvenida"> <!-- Ajusta la ruta de la imagen -->
+        </div>
+        <div class="login-content">
+            <form action="/login/registro.php" method="POST">
+                <h2 class="title">WELCOME</h2>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <input type="text" class="input" name="name" placeholder="Name" required>
+                    </div>
+                </div>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="div">
+                        <input type="text" class="input" name="lastName" placeholder="Last name" required>
+                    </div>
+                </div>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="div">
+                        <input type="text" class="input" name="email" placeholder="E-mail" required>
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i"> 
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <input type="password" class="input" name="password" placeholder="Password" required>
+                    </div>
+                </div>
+                <a href="Login.html">Do you already have an account? Log in</a>
+                <input type="submit" class="btn" value="Register">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
